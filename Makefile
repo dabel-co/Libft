@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2021/11/02 17:23:51 by dabel-co         ###   ########.fr        #
+#    Updated: 2021/11/02 17:33:18 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ Cextra = $(addprefix src/ft_, $(addsuffix .c, $(EXTRA)))
 Oextra = $(addprefix $(OBJE_DIR)/ft_, $(addsuffix .o, $(EXTRA)))
 
 $(NAME) : create_dir $(O)
-	$(AR) $(NAME) $(O)
+	@$(AR) $(NAME) $(O)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(FLAGS) -c $< -o $@
@@ -86,9 +86,9 @@ $(OBJE_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 bonus : $(Obonus)
-	$(AR) $(NAME) $(Obonus)
+	@$(AR) $(NAME) $(O) $(Obonus)
 extra : $(Oextra)
-	$(AR) $(NAME) $(Oextra)
+	@$(AR) $(NAME) $(O) $(Obonus) $(Oextra)
 create_dir : 
 	@mkdir -p obj
 clean:
