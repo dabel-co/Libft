@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 	int	atoi;
 	int	n;
 
-	i = 0;
+	i = 1;
 	atoi = 0;
 	n = 1;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))

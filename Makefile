@@ -14,7 +14,7 @@ NAME = libft.a
 
 FLAGS = -Wall -Werror -Wextra 
 AR = ar rc
-
+CC = cc
 FILES = bzero \
 		memcpy \
 		memset \
@@ -60,16 +60,17 @@ BONUS = lstnew \
 		lstiter \
 		lstmap \
 
-
-C = $(addprefix ./ft_, $(addsuffix .c, $(FILES)))
+C = $(addprefix ./src/ft_, $(addsuffix .c, $(FILES)))
 O = $(addprefix ./ft_, $(addsuffix .o, $(FILES)))
 Cbonus = $(addprefix ./ft_, $(addsuffix .c, $(BONUS)))
 Obonus = $(addprefix ./ft_, $(addsuffix .o, $(BONUS)))
 
-$(NAME) : 
-	gcc $(FLAGS) -c $(C) && $(AR) $(NAME) $(O)
-bonus :
+$(NAME) : create_dir $(O) 
+	$(CC) $(FLAGS) -c $(C) && $(AR) $(NAME) $(O)
+bonus : $(OBonus)
 	gcc $(FLAGS) -c $(C) $(Cbonus) && $(AR) $(NAME) $(O) $(Obonus)
+create_dir : 
+	mkdir -p OBJ
 clean:
 	rm -f $(O) $(Obonus)
 fclean: clean
