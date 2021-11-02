@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2021/10/27 16:08:27 by dabel-co         ###   ########.fr        #
+#    Updated: 2021/11/02 17:23:51 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,12 @@ NAME = libft.a
 FLAGS = -Wall -Werror -Wextra 
 AR = ar rc
 CC = cc
-FILES = bzero \
+OBJ_DIR = obj
+OBJB_DIR = obj
+OBJE_DIR = obj
+SRC_DIR = src
+SRC = 	atoi \
+		bzero \
 		memcpy \
 		memset \
 		memccpy \
@@ -36,7 +41,6 @@ FILES = bzero \
 		strlcpy \
 		strlcat \
 		strnstr \
-		atoi \
 		calloc \
 		strdup \
 		substr \
@@ -60,21 +64,38 @@ BONUS = lstnew \
 		lstiter \
 		lstmap \
 
-C = $(addprefix ./src/ft_, $(addsuffix .c, $(FILES)))
-O = $(addprefix ./ft_, $(addsuffix .o, $(FILES)))
-Cbonus = $(addprefix ./ft_, $(addsuffix .c, $(BONUS)))
-Obonus = $(addprefix ./ft_, $(addsuffix .o, $(BONUS)))
+EXTRA = atoi_pointer \
 
-$(NAME) : create_dir $(O) 
-	$(CC) $(FLAGS) -c $(C) && $(AR) $(NAME) $(O)
-bonus : $(OBonus)
-	gcc $(FLAGS) -c $(C) $(Cbonus) && $(AR) $(NAME) $(O) $(Obonus)
+C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
+O = $(addprefix $(OBJ_DIR)/ft_, $(addsuffix .o, $(SRC)))
+Cbonus = $(addprefix src/ft_, $(addsuffix .c, $(BONUS)))
+Obonus = $(addprefix $(OBJB_DIR)/ft_, $(addsuffix .o, $(BONUS)))
+Cextra = $(addprefix src/ft_, $(addsuffix .c, $(EXTRA)))
+Oextra = $(addprefix $(OBJE_DIR)/ft_, $(addsuffix .o, $(EXTRA)))
+
+$(NAME) : create_dir $(O)
+	$(AR) $(NAME) $(O)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(OBJB_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(OBJE_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(FLAGS) -c $< -o $@
+
+bonus : $(Obonus)
+	$(AR) $(NAME) $(Obonus)
+extra : $(Oextra)
+	$(AR) $(NAME) $(Oextra)
 create_dir : 
-	mkdir -p OBJ
+	@mkdir -p obj
 clean:
-	rm -f $(O) $(Obonus)
+	@rm -rf $(OBJ_DIR)
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 all: $(NAME)
 
 re: fclean all
+.PHONY : all clean fclean bonus extra
