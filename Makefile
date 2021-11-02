@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2021/11/02 17:33:18 by dabel-co         ###   ########.fr        #
+#    Updated: 2021/11/02 17:50:26 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,9 +85,9 @@ $(OBJB_DIR)/%.o: $(SRC_DIR)/%.c
 $(OBJE_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(FLAGS) -c $< -o $@
 
-bonus : $(Obonus)
+bonus : $(NAME) $(Obonus)
 	@$(AR) $(NAME) $(O) $(Obonus)
-extra : $(Oextra)
+extra : bonus $(Oextra)
 	@$(AR) $(NAME) $(O) $(Obonus) $(Oextra)
 create_dir : 
 	@mkdir -p obj
