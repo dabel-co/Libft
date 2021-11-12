@@ -2,7 +2,7 @@
 
 **This project aims to code a C library regrouping usual functions that you’ll be use for all your next projects.** 
 
-The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page for each function.
+The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page of each function.
 |  Name | Description
 | -- | -- |
 ft_toupper | Converts a lower-case letter to the corresponding upper-case letter. | a
