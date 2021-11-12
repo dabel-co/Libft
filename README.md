@@ -4,7 +4,7 @@
 
 The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page for each function.
 |  Name | Description
-| -- | -- | -- | -- | -- | -- | -- | -- |
+| -- | -- |
 ft_toupper | Converts a lower-case letter to the corresponding upper-case letter. | a
 ft_tolower | Converts an upper-case letter to the corresponding lower-case letter.
 ft_strchr | locates the first occurrence of c (converted to a char) in the string pointed to by s
