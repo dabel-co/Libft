@@ -2,7 +2,7 @@
 
 **This project aims to code a C library regrouping usual functions that you’ll be use for all your next projects.** 
 
-This project will clone and compile itself when doing `make` on most of my projects, the flags for compiling are :
+Libft will clone and compile itself when doing `make` on most of my projects, the flags for compiling are :
 
  - make -> Just the mandatory functions
  - make bonus -> mandatory + linked list functions
