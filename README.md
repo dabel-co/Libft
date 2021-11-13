@@ -2,7 +2,18 @@
 
 **This project aims to code a C library regrouping usual functions that you’ll be use for all your next projects.** 
 
+This project will clone and compile itself when doing `make` on most of my projects, the flags for compiling are :
+
+ - make -> Just the mandatory functions
+ - make bonus -> mandatory + linked list functions
+ - make extra -> all of the above + my extra functions
+
+ **What i've learned doing this project**
+ How pointers actually work, how to allocate memory correctly, protecting functions from bad / empty inputs...
+ Thanks to [Tripouille](https://github.com/Tripouille/libftTester) for making my life easier with his awersome tests.
+ 
 The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page of each function.
+
 |  Name | Description
 | -- | -- |
 ft_toupper | Converts a lower-case letter to the corresponding upper-case letter. | a
@@ -27,7 +38,7 @@ ft_memmove | Copies len bytes from string src to string dst.  The two strings ma
 ft_strlcpy | Copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.
 ft_strlcat | Appends string src to the end of dst.  It will append at most dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, unless dstsize is 0 or the original dst string was longer than dstsize
 #
-The following functions are either not included in the libc, or included in a different form
+The following functions are either not included in the libc, or included in a different form.
 | Name | Description
 | -- | -- |
 |ft_substr | Allocates (with malloc) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.
@@ -42,7 +53,7 @@ The following functions are either not included in the libc, or included in a di
 |ft_putendl_fd | Outputs the string ’s’ to the given file descriptor, followed by a newline.
 ft_putnbr_fd | Outputs the integer ’n’ to the given file descriptor.
 #
-The following functions will allow you to easily create and manipulate lists 
+The following functions will allow you to easily create and manipulate lists.
 | Name | Description
 | -- | -- |
 |ft_lstnew | Allocates (with malloc) and returns a new element. The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL
@@ -54,3 +65,12 @@ The following functions will allow you to easily create and manipulate lists
 | ft_lstclear | Deletes and frees the given element and every successor of that element, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.
 |ft_lstiter | Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
 | ft_lstmap | Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
+#
+The following functions are extras i've created to make my life easier in the following projects, instead of creating "auxiliar" functions for a particular project, i can easily use this ones in future projects.
+Name | Description 
+| -- | -- |
+|ft_atoi_pointer | Similar to atoi, but instead of returning you the int with the value you wanted to convert it gives you the value pointing the int you send to that value, also, it will return false if the value dosn't fit on a 4-byte int, currently using this this for push_swap.
+| ft_isnumber | similar to ft_isdigit, but will also accept '-' and '+'.
+
+
+> Learn, don't copy
