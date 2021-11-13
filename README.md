@@ -10,7 +10,8 @@ Libft will clone and compile itself when doing `make` on most of my projects, th
 
  **What i've learned doing this project**
  How pointers actually work, how to allocate memory correctly, protecting functions from bad / empty inputs...
- Thanks to [Tripouille](https://github.com/Tripouille/libftTester) for making my life easier with his awersome tests.
+
+Thanks to [Tripouille](https://github.com/Tripouille/libftTester) for making my life easier with his awersome tests.
  
 The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page of each function.
 
