@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int ft_isnumber(int c)
+int	ft_isnumber(int c)
 {
 	if (c == '-' || c == '+')
 		return (1);
