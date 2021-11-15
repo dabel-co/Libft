@@ -2,16 +2,17 @@
 
 **This project aims to code a C library regrouping usual functions that you’ll be use for all your next projects.** 
 
-Libft will clone and compile itself when doing `make` on most of my projects, the flags for compiling are :
+Libft will clone and compile itself when doing `make` on most of my projects, if you wish to compile the project by itself, the flags for compiling are :
 
  - make -> Just the mandatory functions
  - make bonus -> mandatory + linked list functions
  - make extra -> all of the above + my extra functions
 
  **What i've learned doing this project**
+ 
  How pointers actually work, how to allocate memory correctly, protecting functions from bad / empty inputs...
 
-Thanks to [Tripouille](https://github.com/Tripouille/libftTester) for making my life easier with his awersome tests.
+Also, thanks to [Tripouille](https://github.com/Tripouille/libftTester) for making my life easier with his awersome tests.
  
 The following functions are exact implementations of the ones found on libc, to check their exact behaviour and returns, you can check the man page of each function.
 
