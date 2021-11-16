@@ -73,6 +73,7 @@ Name | Description
 | -- | -- |
 |ft_atoi_pointer | Similar to atoi, but instead of returning you the int with the value you wanted to convert it gives you the value pointing the int you send to that value, also, it will return false if the value dosn't fit on a 4-byte int, currently using this this for push_swap.
 | ft_isnumber | similar to ft_isdigit, but will also accept '-' and '+'.
-
+| ft_lst_repeat | Return -1 if an element is found two times in the list, should be called everytime you add an element, since it only compares the last to every other element.
+| ft_lst_order | Returns -1 if the list isn't in order, using it on push_swap, you should probably only use it with numbers.
 
 > Learn, don't copy
