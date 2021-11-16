@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2021/11/15 19:47:00 by dabel-co         ###   ########.fr        #
+#    Updated: 2021/11/16 15:23:35 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ BONUS = lstnew \
 EXTRA = atoi_pointer \
 		isnumber \
 		lst_repeat \
+		lst_order \
 
 C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
 O = $(addprefix $(OBJ_DIR)/ft_, $(addsuffix .o, $(SRC)))

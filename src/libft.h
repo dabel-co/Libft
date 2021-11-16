@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:28:48 by dabel-co          #+#    #+#             */
-/*   Updated: 2021/11/15 19:47:01 by dabel-co         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:23:24 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
 int		ft_atoi_pointer(char *str, int *p);
 int		ft_isnumber(int c);
-int		ft_lst_repeat(t_list *a, int x);
+int		ft_lst_repeat(t_list *a);
+int		ft_lst_order(t_list *a);
 #endif
