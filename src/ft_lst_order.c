@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 15:21:12 by dabel-co          #+#    #+#             */
-/*   Updated: 2021/11/16 15:25:39 by dabel-co         ###   ########.fr       */
+/*   Updated: 2021/11/19 18:47:32 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lst_order(t_list *a)
 	aux = a;
 	while (aux->next != NULL)
 	{
-		if (aux->content > aux->next->content)
+		if (*(int *)aux->content > *(int *)aux->next->content)
 			return (-1);
 		aux = aux->next;
 	}
