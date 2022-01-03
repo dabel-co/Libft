@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2021/12/16 12:54:01 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/01/03 13:40:54 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRC = 	atoi \
 		strdup \
 		substr \
 		strjoin \
+		strjoin_free \
 		strtrim \
 		split \
 		itoa \
@@ -91,16 +92,16 @@ $(NAME) : create_dir $(O) $(OPRINTF)
 	@$(AR) $(NAME) $(O) $(OPRINTF)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJB_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJE_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJP_DIR)/%.o: $(SRCP_DIR)/%.c
-	$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 bonus : $(NAME) $(Obonus)
 	@$(AR) $(NAME) $(O) $(Obonus)
