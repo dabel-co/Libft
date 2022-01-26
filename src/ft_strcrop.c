@@ -6,11 +6,11 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 13:35:45 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/01/26 13:35:47 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:03:22 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "libft.h"
 
 char	*ft_strcrop(char const *str, unsigned int start, size_t len)
 {
