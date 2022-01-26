@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:28:48 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/01/03 13:42:17 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/01/26 13:35:36 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,5 @@ int		ft_atoi_pointer(char *str, int *p);
 int		ft_isnumber(int c);
 int		ft_lst_repeat(t_list *a);
 int		ft_lst_order(t_list *a);
+char	*ft_strcrop(char const *str, unsigned int start, size_t len);
 #endif

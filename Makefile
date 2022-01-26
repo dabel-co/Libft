@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2022/01/03 13:40:54 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/01/26 13:36:17 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ EXTRA = atoi_pointer \
 		isnumber \
 		lst_repeat \
 		lst_order \
+		strcrop \
 
 C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
 O = $(addprefix $(OBJ_DIR)/ft_, $(addsuffix .o, $(SRC)))
