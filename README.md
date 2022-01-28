@@ -76,5 +76,7 @@ Name | Description
 | ft_isnumber | similar to ft_isdigit, but will also accept '-' and '+'.
 | ft_lst_repeat | Return -1 if an element is found two times in the list, should be called everytime you add an element, since it only compares the last to every other element.
 | ft_lst_order | Returns -1 if the list isn't in order, using it on push_swap, you should probably only use it with numbers.
+|ft_strjoin_free | Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’, but also frees the first string.
+| ft_strcrop | Simillar to ft_substr, but cuts the end of the string, not the beginning.
 
 > Learn, don't copy
