@@ -39,7 +39,6 @@ ft_memcpy | Copies n bytes from memory area src to memory area dst.
 ft_memmove | Copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
 ft_strlcpy | Copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.
 ft_strlcat | Appends string src to the end of dst.  It will append at most dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, unless dstsize is 0 or the original dst string was longer than dstsize
-|ft_printf | Lightweight version of printf.
 #
 The following functions are either not included in the libc, or included in a different form.
 | Name | Description
