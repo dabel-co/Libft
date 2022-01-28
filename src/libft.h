@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:28:48 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/01/26 13:35:36 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:32:14 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int		ft_printf(const char *input, ...);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memset(void *b, int c, size_t len);

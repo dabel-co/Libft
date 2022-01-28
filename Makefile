@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2022/01/26 13:36:17 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/01/28 16:33:22 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,7 @@ CC = cc
 OBJ_DIR = obj
 OBJB_DIR = obj
 OBJE_DIR = obj
-OBJP_DIR = obj
 SRC_DIR = src
-SRCP_DIR = src/printf
 SRC = 	atoi \
 		bzero \
 		memcpy \
@@ -57,13 +55,6 @@ SRC = 	atoi \
 		putendl_fd \
 		putnbr_fd \
 
-PRINTF = printf \
-		send \
-		utils \
-		int \
-		x \
-		char \
-
 BONUS = lstnew \
 		lstadd_front \
 		lstsize \
@@ -82,8 +73,6 @@ EXTRA = atoi_pointer \
 
 C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
 O = $(addprefix $(OBJ_DIR)/ft_, $(addsuffix .o, $(SRC)))
-CPRINTF = $(addprefix src/printf/ft_, $(addsuffix .c, $(PRINTF)))
-OPRINTF = $(addprefix $(OBJP_DIR)/ft_, $(addsuffix .o, $(PRINTF)))
 Cbonus = $(addprefix src/ft_, $(addsuffix .c, $(BONUS)))
 Obonus = $(addprefix $(OBJB_DIR)/ft_, $(addsuffix .o, $(BONUS)))
 Cextra = $(addprefix src/ft_, $(addsuffix .c, $(EXTRA)))
@@ -99,9 +88,6 @@ $(OBJB_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJE_DIR)/%.o: $(SRC_DIR)/%.c
-	@$(CC) $(FLAGS) -c $< -o $@
-
-$(OBJP_DIR)/%.o: $(SRCP_DIR)/%.c
 	@$(CC) $(FLAGS) -c $< -o $@
 
 bonus : $(NAME) $(Obonus)
