@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:28:48 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/01/28 16:32:14 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/01/31 11:52:28 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,5 @@ int		ft_isnumber(int c);
 int		ft_lst_repeat(t_list *a);
 int		ft_lst_order(t_list *a);
 char	*ft_strcrop(char const *str, unsigned int start, size_t len);
+int		ft_strcmp(char *str1, char *str2);
 #endif
