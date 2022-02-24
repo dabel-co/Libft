@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2022/01/31 11:51:34 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/02/24 16:19:54 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ EXTRA = atoi_pointer \
 		lst_repeat \
 		lst_order \
 		strcrop \
+		strcrop_free \
 		strcmp \
 
 C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
