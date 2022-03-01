@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2022/02/24 16:19:54 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/03/01 12:19:32 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ EXTRA = atoi_pointer \
 		strcrop \
 		strcrop_free \
 		strcmp \
+		free_matrix \
 
 C = $(addprefix src/ft_, $(addsuffix .c, $(SRC)))
 O = $(addprefix $(OBJ_DIR)/ft_, $(addsuffix .o, $(SRC)))

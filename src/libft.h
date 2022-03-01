@@ -6,7 +6,7 @@
 /*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:28:48 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/02/24 16:18:55 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/03/01 12:18:30 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,5 @@ int		ft_lst_order(t_list *a);
 char	*ft_strcrop(char const *str, unsigned int start, size_t len);
 int		ft_strcmp(char *str1, char *str2);
 char	*ft_strcrop_free(char *str, unsigned int start, size_t len);
+void	ft_free_matrix(char **str);
 #endif
