@@ -6,9 +6,11 @@
 /*   By: dabel-co <dabel-co@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 12:18:56 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/03/01 12:19:26 by dabel-co         ###   ########.fr       */
+/*   Updated: 2022/03/01 12:20:18 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_matrix_free(char **str)
 {
