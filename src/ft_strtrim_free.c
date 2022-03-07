@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dabel-co <dabel-co@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 19:13:57 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/03/07 14:27:12 by dabel-co         ###   ########.fr       */
+/*   Created: 2022/03/07 14:29:37 by dabel-co          #+#    #+#             */
+/*   Updated: 2022/03/07 14:29:39 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		x;
-
+	char	*aux;
+	
 	if (!s1 || !set)
 		return (NULL);
+	aux = s1;
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	x = ft_strlen(s1);
 	while (x && ft_strchr(set, s1[x]))
 		x--;
+	free(aux);
 	if (!x)
 		return (ft_strdup(""));
 	return (ft_substr(s1, 0, x + 1));

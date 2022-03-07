@@ -6,7 +6,7 @@
 #    By: dabel-co <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 10:36:13 by dabel-co          #+#    #+#              #
-#    Updated: 2022/03/01 12:19:32 by dabel-co         ###   ########.fr        #
+#    Updated: 2022/03/07 14:30:12 by dabel-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ EXTRA = atoi_pointer \
 		lst_order \
 		strcrop \
 		strcrop_free \
+		strtrim_free \
 		strcmp \
 		free_matrix \
 
