@@ -6,7 +6,7 @@
 /*   By: vguttenb <vguttenb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 14:29:37 by dabel-co          #+#    #+#             */
-/*   Updated: 2022/03/23 16:36:52 by vguttenb         ###   ########.fr       */
+/*   Updated: 2022/04/07 11:47:45 by dabel-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim_free(char *s1, char const *set)
 	int		x;
 	char	*aux;
 	char	*ret;
-	
+
 	if (!s1 || !set)
 		return (NULL);
 	aux = s1;
@@ -25,7 +25,7 @@ char	*ft_strtrim_free(char *s1, char const *set)
 		s1++;
 	if (!*s1)
 		ret = ft_strdup("");
-	else 
+	else
 	{
 		x = ft_strlen(s1) - 1;
 		while (x && ft_strchr(set, s1[x]))
